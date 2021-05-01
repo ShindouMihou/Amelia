@@ -1,24 +1,18 @@
 #### Amelia, a Discord Bot of Waters.
 
 Amelia is a simple Discord bot that is used to fetch RSS feeds, and updates users
-about a certain author updating their stories.
+about a certain author updating their stories. 
+
+If you don't want to host the bot yourself, then feel free to invite the officially public-hosted bot.
+[Invite the bot now](https://discord.com/oauth2/authorize?client_id=786464598835986483&scope=bot&permissions=67488832)
 
 #### Requirements
 * Java 11.
 * MongoDB.
 * A server (at least 1 GB of RAM, 2 vCPU)
 
-#### How to install, public bot.
-
-The Amelia bot is already hosted publicly on our servers, as such, you can add it to your own
-discord server by inviting it from our website.
-
-[Invite the bot now](https://discord.com/oauth2/authorize?client_id=786464598835986483&scope=bot&permissions=67488832)
-
 
 #### How to install, self-hosting.
-
-Steps:
 1. Create a Discord bot application on https://discordapp.com/developers.
 2. Install MongoDB on either your Windows or Ubuntu server: [Install MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
 3. Head to your system environments and add the following:

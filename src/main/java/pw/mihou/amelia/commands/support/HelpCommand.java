@@ -9,7 +9,6 @@ import pw.mihou.amelia.commands.base.Command;
 import pw.mihou.amelia.commands.base.info.CommandMeta;
 import pw.mihou.amelia.commands.base.info.Commands;
 import pw.mihou.amelia.templates.Embed;
-import pw.mihou.amelia.templates.Message;
 
 public class HelpCommand extends Command {
 
@@ -21,10 +20,10 @@ public class HelpCommand extends Command {
     protected void runCommand(MessageCreateEvent event, User user, Server server, String[] args) {
         if (args.length > 1) {
             if (Commands.meta.containsKey(args[1])) {
-                Message.msg(commandEmbed(Commands.getCommand(args[1]))).send(event.getChannel());
+                event.getMessage().reply(commandEmbed(Commands.getCommand(args[1])));
             }
         } else {
-            Message.msg(helpEmbed(event.getApi())).send(event.getChannel());
+            event.getMessage().reply(helpEmbed(event.getApi()));
         }
     }
 
@@ -39,6 +38,7 @@ public class HelpCommand extends Command {
         return new Embed().setThumbnail(api.getYourself().getAvatar())
                 .build()
                 .addInlineField("Feeds", "`feeds`\n`subscribe`\n`unsubscribe`\n`register`\n`remove`")
-                .addInlineField("Miscellaneous", "`ping`\n`invite`\n`test`\n`settings`");
+                .addInlineField("Miscellaneous", "`ping`\n`invite`\n`test`\n`settings`")
+                .addInlineField("Trending Notifications", "`iam`\n`author`");
     }
 }
